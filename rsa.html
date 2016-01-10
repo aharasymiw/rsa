@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RSA Implementation</title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <form>
+      <h2>Shared Key</h2>
+      <ol>
+        <li>A low strength shared key is 5.</li>
+        <li>A medium strength shared key is 7.</li>
+        <li>A high strength shared key is 13.</li>
+      </ol>
+      <label for="sharedKeyStrength"> Choose a strength for the shared key:
+      <select id="sharedKeyStrength" name="sharedKeyStrength" required>
+        <option value="5">low</option>
+        <option value="7">medium</option>
+        <option value="13">high</option>
+      </select>
+      <br>
+      <h2>Private Key</h2>
+      <ol>
+        <li>A low strength private key is approx 12 bits.</li>
+        <li>A medium strength private key is 14 bits.</li>
+        <li>A high strength private key is 18 bits.</li>
+      </ol>
+      <label for="publicKeyStrength"> Choose a strength for the public key:
+      <select id="publicKeyStrength" name="publicKeyStrength" required>
+        <option value="12">low</option>
+        <option value="14">medium</option>
+        <option value="18">high</option>
+      </select>
+      <h2>Run the algorithm</h2>
+      <input id="submit" class="button" type="submit" value="Watch It Work">
+    </form>
+    <ul>
+      <li>If prompted with a 'stop script' warning, choose 'continue'.</li>
+      <li>You shouldn't have to 'continue' more than a handfull of times.</li>
+      <li>Unless you choose a high value for the shared key strength.</li>
+      <li>Then it will error out and crash.</li>
+    </ul>
+    <br>
+
+    <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="rsa.js"></script>
+  </body>
+</html>
